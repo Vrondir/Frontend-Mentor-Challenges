@@ -1,0 +1,80 @@
+body {
+  font-family: 'Figtree', sans-serif;
+  background-color: hsl(47, 88%, 63%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  display: inline-block;
+  text-align: left;
+  width: clamp(20em, 30vw, 370px);
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.2em;
+  border-radius: 20px;
+  border: 1px solid;
+  box-shadow: 0.5em 0.5em;
+  box-sizing: border-box;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.card-tag {
+  display: inline-block;
+  font-size: clamp(13px, 1.5vw, 15px);
+  font-weight: 800;
+  background-color: hsl(47, 88%, 63%);
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.card-date {
+  font-size: clamp(12px, 1.5vw, 14px);
+}
+
+.card-title {
+  font-size: clamp(20px, 1.5vw, 24px);
+  font-weight: 800;
+}
+
+.card-title:hover {
+  cursor: pointer;
+  color: hsl(47, 88%, 63%);
+}
+
+.card-desc {
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 500;
+  line-height: 1.5em;
+  color: hsl(0, 0%, 50%);
+  margin-bottom: 1.5em;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+  font-size: clamp(14px, 1.5vw, 16px);
+  font-weight: 800;
+}
+
+.card-author img {
+  width: 2em;
+  margin-right: 1em;
+}
+
+.attribution {
+  margin-top: 1.5em;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

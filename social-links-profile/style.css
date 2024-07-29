@@ -1,0 +1,85 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: hsl(0, 0%, 12%);
+  border-radius: 10px;
+  padding: clamp(1rem, 2vw, 2rem);
+  width: 20rem;
+}
+
+.profile {
+  padding-top: 1rem;
+}
+
+.profile img {
+  width: 30%;
+  border-radius: 50%;
+  margin-bottom: 0.3rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.location {
+  color: hsl(75, 94%, 57%);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.description {
+  margin-top: 2rem;
+  margin-bottom: 1.8rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  gap: 1rem;
+}
+
+.socials a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 20%);
+  border-radius: 8px;
+  width: clamp(300px, 20vw, 320px);
+  padding: 1rem 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.socials a:hover {
+  background-color: hsl(75, 94%, 57%);
+  color: hsl(0, 0%, 8%);
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(75, 94%, 57%);
+}

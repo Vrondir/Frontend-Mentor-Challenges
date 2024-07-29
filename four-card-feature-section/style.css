@@ -1,0 +1,139 @@
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: var(--grayish-blue);
+}
+
+h2 {
+  color: var(--very-dark-blue);
+}
+
+body {
+  background-color: var(--very-light-gray);
+  padding: 2rem;
+}
+
+.text-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.text-container h1 {
+  font-size: clamp(1.6rem, 1.4rem + 1vw, 2.4rem);
+  font-weight: 200;
+  color: var(--very-dark-blue);
+}
+
+.text-container h2 {
+  font-size: clamp(1.6rem, 1.4rem + 1vw, 2.4rem);
+  font-weight: 600;
+}
+
+.text-container p {
+  margin-top: 1rem;
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem 0.3rem 0.5rem 0.5rem;
+  border-top: 0.3rem solid;
+  padding: 2rem;
+  box-shadow: 0 0.3rem 1rem hsl(230, 33%, 82%);
+  max-width: 20rem;
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card img {
+  margin-top: 2rem;
+  width: 4rem;
+  align-self: flex-end;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.card:first-child {
+  border-top-color: var(--cyan);
+}
+
+.card:nth-child(2) {
+  border-top-color: var(--red);
+}
+
+.card:nth-child(3) {
+  border-top-color: var(--orange);
+}
+
+.card:nth-child(4) {
+  border-top-color: var(--blue);
+}
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1200px) {
+  .card img {
+    margin-top: 3rem;
+  }
+  .card:first-child {
+    margin-top: 17rem;
+  }
+  .card:nth-child(3) {
+    order: 2;
+    margin-top: -8.5rem;
+  }
+  .card:nth-child(4) {
+    margin-top: 17rem;
+  }
+  .card-container {
+    margin-top: -4rem;
+  }
+}
