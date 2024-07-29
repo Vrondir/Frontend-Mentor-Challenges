@@ -4,7 +4,7 @@ function createCard(item) {
   const cards = document.getElementById('cards');
   const url = `./${item.name}`;
   const image = `./${item.name}/design/desktop-preview.jpg`;
-  const repo = ``;
+  const repo = `https://github.com/porumbachanov/Frontend-Mentor-Challenges/tree/main/${item.name}`;
 
   const cardHTML = `
     <li class="card">
@@ -16,7 +16,7 @@ function createCard(item) {
                 <a href="${url}" target="_blank">${item.title}</a>
             </h2>
             <small>
-                <a href="#">Github repo</a>
+                <a href="${repo}" target="_blank">Github repo</a>
             </small>
         </article>
     </li>`;
