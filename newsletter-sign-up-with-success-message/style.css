@@ -18,15 +18,22 @@ body {
   font-size: 16px;
   color: var(--dark-slate-grey);
   background-color: var(--dark-slate-grey);
+  min-height: 100vh;
+  display: flex; /* Add flex to center content */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   background-color: var(--white);
-  width: 100%;
-  height: 100vh;
-  /* max-width: 30rem; */
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 picture img,
@@ -44,7 +51,8 @@ article {
 
 h1 {
   font-size: 2.5rem;
-  margin: 1.5rem 0;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 ul {
@@ -67,7 +75,16 @@ label {
   font-weight: 700;
 }
 
-input {
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-label {
+  color: var(--tomato);
+}
+
+.email {
   width: 100%;
   display: inline-block;
   box-sizing: border-box;
@@ -78,16 +95,23 @@ input {
   border-radius: 0.5rem;
 }
 
-input::placeholder {
+.email::placeholder {
   font-size: 1rem;
 }
 
-input:focus {
+.email:focus {
   outline: none;
   border: 1px solid var(--dark-slate-grey);
 }
 
+.email.error {
+  background-color: #ffe8e6;
+  border: 1px solid #f07265;
+  color: var(--tomato);
+}
+
 button {
+  width: 100%;
   background-color: var(--dark-slate-grey);
   color: var(--white);
   border: none;
@@ -98,17 +122,47 @@ button {
   font-weight: 700;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--tomato);
+  box-shadow: 0px 5px 20px var(--tomato);
+}
+
+#success-message {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#success-message article {
+  margin: 2rem;
+  margin-top: 10rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#success-message img {
+  max-width: 4rem;
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.8rem;
   text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  color: white;
 }
 
-@media (min-width: 700px) {
+.attribution a {
+  color: var(--tomato);
+}
+
+@media (min-width: 780px) {
   body {
     display: flex;
     align-items: center;
@@ -118,10 +172,12 @@ button {
 
   .wrapper {
     flex-direction: row;
-    height: 100%;
-    max-width: 60rem;
     border-radius: 2rem;
+    max-width: 60rem;
+    min-height: auto;
     align-items: center;
+    width: auto;
+    margin: 1.5rem;
   }
 
   picture {
@@ -147,5 +203,15 @@ button {
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+
+  #success-message {
+    max-width: 30rem;
+    height: auto;
+  }
+
+  #success-message article {
+    margin: 2rem 4rem;
+    order: 0;
   }
 }
