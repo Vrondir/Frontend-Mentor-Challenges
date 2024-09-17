@@ -41,4 +41,10 @@ export const challenges = [
     level: 'Newbie',
     id: 7,
   },
+  {
+    name: 'newsletter-sign-up-with-success-message',
+    title: 'Newsletter sign-up form with success message',
+    level: 'Junior',
+    id: 8,
+  },
 ];
