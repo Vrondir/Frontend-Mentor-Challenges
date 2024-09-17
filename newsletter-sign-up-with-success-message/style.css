@@ -56,7 +56,7 @@ h1 {
 }
 
 ul {
-  list-style-image: url('/assets/images/icon-list.svg');
+  list-style-image: url('assets/images/icon-list.svg');
   padding: 0;
   margin: 2rem 1.5rem;
 }
