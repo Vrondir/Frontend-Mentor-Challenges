@@ -47,4 +47,10 @@ export const challenges = [
     level: 'Junior',
     id: 8,
   },
+  {
+    name: 'nft-preview-card-component-main',
+    title: 'NFT preview card component',
+    level: 'Newbie',
+    id: 9,
+  },
 ];
