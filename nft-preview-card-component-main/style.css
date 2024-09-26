@@ -1,0 +1,172 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--very-dark-blue-main);
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  color: var(--soft-blue);
+}
+
+.card {
+  background-color: var(--very-dark-blue-card);
+  padding: 1.5rem;
+  max-width: 19rem;
+  border-radius: 1rem;
+  margin: 0 1.5rem;
+}
+
+.card__image {
+  position: relative;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 255, 247, 0.5);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.overlay img {
+  max-width: 3rem;
+}
+
+.card__image:hover .overlay {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.card__text {
+  margin: 1rem 0;
+}
+
+.card__text h1 {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.card__text h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.card__text p {
+  /* font-size: 1.13rem; */
+  font-size: clamp(1rem, 4.2vw, 1.13rem);
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+.card__price {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  transition: margin 0.2s ease;
+}
+
+.card__price-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__price-item img {
+  max-width: 0.7rem;
+  margin-right: 0.5rem;
+}
+
+.card__price-item p {
+  font-size: 1rem;
+}
+
+.card__price-item--ether p {
+  color: var(--cyan);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.card__price-item--time img {
+  max-width: 1rem;
+}
+
+.card__divider {
+  margin: 1rem 0;
+  color: var(--very-dark-blue-line);
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 0;
+  transition: margin-bottom 0.2s ease;
+}
+
+.card__author img {
+  max-width: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.card__author p span {
+  color: var(--white);
+  transition: color 0.2s ease-in-out;
+}
+
+.card__author p span:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.attribution {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--cyan);
+}
+
+@media (min-width: 440px) {
+  .card__price {
+    margin: 1.4rem 0;
+  }
+
+  .card__author {
+    margin-bottom: 0.8rem;
+  }
+}
